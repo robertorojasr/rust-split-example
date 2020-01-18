@@ -1,15 +1,13 @@
-/// Single executable, single module with 3 submodules
+/// This is now an executable, technically is no longer part of the crate
+/// so we have to call the library `src/lib.rs` as an external crate
 
-mod module_abc;
+extern crate desintegration_example;
 
-// this 3 line could be replaced by
-// use crate::module_abc::{module_a::*, module_b::*, module_c::*};
-use crate::module_abc::module_a::*;
-use crate::module_abc::module_b::*;
-use crate::module_abc::module_c::*;
+use desintegration_example::module_abc::module_a::*;
+use desintegration_example::module_abc::module_b::*;
+use desintegration_example::module_abc::module_c::*;
 
 fn main() {
-    // we could also call `A` as `crate::module_abc::A` but that would be silly
     let first = A {
         a_1: "first one".to_string(),
         a_2: 2,
