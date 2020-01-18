@@ -1,0 +1,8 @@
+[package]
+name = "de_cli"
+version = "0.1.0"
+authors = []
+edition = "2018"
+
+[dependencies]
+de_lib = { path = "../de_lib" }  # this is our lib, now in an external crate

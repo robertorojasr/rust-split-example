@@ -1,9 +1,5 @@
-[package]
-name = "desintegration_example"
-version = "0.1.0"
-authors = []
-edition = "2018"
+# this now doesn't have a [package] or [dependencies] sections
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[workspace]
+members = ["de_lib", "de_cli"]
 
-[dependencies]

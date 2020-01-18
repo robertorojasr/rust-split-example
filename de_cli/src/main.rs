@@ -1,11 +1,11 @@
 /// This is now an executable, technically is no longer part of the crate
 /// so we have to call the library `src/lib.rs` as an external crate
 
-extern crate desintegration_example;
+extern crate de_lib;
 
-use desintegration_example::module_abc::module_a::*;
-use desintegration_example::module_abc::module_b::*;
-use desintegration_example::module_abc::module_c::*;
+use de_lib::module_abc::module_a::*;
+use de_lib::module_abc::module_b::*;
+use de_lib::module_abc::module_c::*;
 
 fn main() {
     let first = A {
