@@ -1,8 +1,12 @@
-/// Single executable, single module
+/// Single executable, single module with 3 submodules
 
 mod module_abc;
 
-use crate::module_abc::*;
+// this 3 line could be replaced by
+// use crate::module_abc::{module_a::*, module_b::*, module_c::*};
+use crate::module_abc::module_a::*;
+use crate::module_abc::module_b::*;
+use crate::module_abc::module_c::*;
 
 fn main() {
     // we could also call `A` as `crate::module_abc::A` but that would be silly
