@@ -1,41 +1,11 @@
+/// Single executable, single module
 
-struct A {
-    a_1: String,
-    a_2: i16,
-    a_3: i16,
-}
+mod module_abc;
 
-impl A {
-    fn calculate_a(&self) -> i16 {
-        self.a_2 * self.a_3
-    }
-}
-
-struct B {
-    b_1: String,
-    b_2: i16,
-    b_3: i16,
-}
-
-impl B {
-    fn calculate_b(&self) -> i16 {
-        self.b_2 * self.b_3
-    }
-}
-
-struct C {
-    c_1: String,
-    c_2: i16,
-    c_3: i16,
-}
-
-impl C {
-    fn calculate_c(&self) -> i16 {
-        self.c_2 * self.c_3
-    }
-}
+use crate::module_abc::*;
 
 fn main() {
+    // we could also call `A` as `crate::module_abc::A` but that would be silly
     let first = A {
         a_1: "first one".to_string(),
         a_2: 2,
